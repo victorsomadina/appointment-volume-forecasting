@@ -5,10 +5,10 @@ FROM python:3.11-slim
 WORKDIR /app
 
 # copy requirments.txt into the root of our working directory
-COPY requirments.txt .
+COPY requirements.txt .
 
 # install dependencies without cache
-RUN pip install --no-cache-dir -r requirments.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # copy everyother thing
 COPY . .
